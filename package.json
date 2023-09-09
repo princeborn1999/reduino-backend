@@ -1,0 +1,17 @@
+{
+  "name": "serialport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reset": "firmata-party leonardo --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firmata-party": "^2.0.1",
+    "johnny-five": "^2.1.0",
+    "serialport": "^12.0.0"
+  }
+}
