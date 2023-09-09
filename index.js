@@ -1,38 +1,21 @@
-// const { Board, Led } = require("johnny-five");
-// const board = new Board();
-// board.on("ready", () => {
-//   const led = new Led(13);
-//   led.blink();
-// });
-// board.on("error", (err) => {
-//   console.log(err);
-// });
+// express
+const express = require("express");
+const app = express();
 
-const SerialPort = require("serialport");
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
 
-async function detectBoardType() {
-  console.log(SerialPort);
-  // const ports = await SerialPort.list();
+// socket.io
 
-  // for (const port of ports) {
-  //   const serialPort = new SerialPort(port.path, { baudRate: 9600 }); // Adjust baud rate as needed
+// Johnny-five
 
-  //   serialPort.write("identify-command", (err) => {
-  //     if (err) {
-  //       console.error(`Error writing to ${port.path}: ${err}`);
-  //     }
-  //   });
-
-  //   serialPort.on("data", (data) => {
-  //     if (data.toString().includes("Arduino Uno")) {
-  //       console.log(`Arduino Uno detected on port ${port.path}`);
-  //     } else if (data.toString().includes("Arduino Leonardo")) {
-  //       console.log(`Arduino Leonardo detected on port ${port.path}`);
-  //     }
-
-  //     serialPort.close();
-  //   });
-  // }
-}
-
-detectBoardType();
+const { Board, Led } = require("johnny-five");
+const board = new Board();
+board.on("ready", () => {
+  const led = new Led(13);
+  led.blink();
+});
+board.on("error", (err) => {
+  console.log(err);
+});
