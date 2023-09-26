@@ -2,7 +2,6 @@ const { Board, Led } = require("johnny-five");
 
 function setupArduino() {
   const board = new Board();
-
   board.on("ready", () => {
     const totalDigitalPins = board.io.pins.length;
     console.log(board.io.pins.length);
