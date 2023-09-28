@@ -28,11 +28,27 @@ function setupSocketIO(server) {
       boardOn = false;
     });
 
-    socket.on("send_led", (data) => {});
-    socket.on("stop_led", (data) => {});
+    socket.on("send_led", (data) => {
+      //TODO: johnny-five 
+      // check setupArduino is true 
+      // call function from arduinoController.js
+    });
+    socket.on("stop_led", (data) => {
+      //TODO: johnny-five 
+      // check setupArduino is true 
+      // call function from arduinoController.js
+    });
 
-    socket.on("send_servo", (data) => {});
-    socket.on("stop_servo", (data) => {});
+    socket.on("send_servo", (data) => {
+      //TODO: johnny-five 
+      // check setupArduino is true 
+      // call function from arduinoController.js
+    });
+    socket.on("stop_servo", (data) => {
+      //TODO: johnny-five 
+      // check setupArduino is true 
+      // call function from arduinoController.js
+    });
   });
 }
 
